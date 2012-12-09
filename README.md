@@ -11,11 +11,13 @@ This gem is a port of the [PHP wrapper][php_wrapper]. The PHP wrapper has some m
 ## Installation
 ``` ruby
 gem "urbanesia", "~> 0.0.1.6"
+```
 
 Create a initializers/urbanesia.rb file:
 ``` ruby
 Urbanesia.consumer_key = "your-key-here"
 Urbanesia.consumer_secret = "your-secret-here"
+```
 
 That's it!
 
@@ -27,12 +29,13 @@ I use it in a rake task, and include "require 'urbanesia'", ie
 ``` ruby
 require 'urbanesia'
 response = Urbanesia.request "get/super_search", "", "what=culinary&where=jakarta"
+
 # response can now be treated as a normal string, eg
 parsed_json = JSON.parse CGI.unescapeHTML(response)
 unless parsed_json.blank? || parsed_json["biz_profile"].blank?
   restaurants = parsed_json["biz_profile"]
 end
- 
+``` 
   
 
 [api_docs]: http://api1.urbanesia.com/get/?manual=please
