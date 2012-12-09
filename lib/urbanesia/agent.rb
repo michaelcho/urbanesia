@@ -1,3 +1,5 @@
+require 'mechanize'
+
 module Urbanesia
 
   class Agent

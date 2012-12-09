@@ -10,7 +10,7 @@ This gem is a port of the [PHP wrapper][php_wrapper]. The PHP wrapper has some m
 
 ## Installation
 ``` ruby
-gem "urbanesia", "~> 0.0.1.6"
+gem "urbanesia", "~> 0.0.1.7"
 ```
 
 Create a initializers/urbanesia.rb file:
